@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Survey Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.5;
+        }
+        form {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input[type="text"], textarea, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .checkbox, .radio, .rating {
+            margin: 10px 0;
+        }
+        .button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Feedback Survey Form</h1>
+    <form id="surveyForm">
+        <!-- Short Answer -->
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" placeholder="Enter your email" required>
+
+        <!-- Multiple Choice (Radio Buttons) -->
+        <label>How did you hear about us?</label>
+        <div class="radio">
+            <input type="radio" id="option1" name="source" value="Social Media" required>
+            <label for="option1">Social Media</label><br>
+            <input type="radio" id="option2" name="source" value="Friends">
+            <label for="option2">Friends</label><br>
+            <input type="radio" id="option3" name="source" value="Advertisements">
+            <label for="option3">Advertisements</label>
+        </div>
+
+        <!-- Checkboxes -->
+        <label>What services do you use? (Select all that apply)</label>
+        <div class="checkbox">
+            <input type="checkbox" id="service1" name="service" value="Web Development">
+            <label for="service1">Web Development</label><br>
+            <input type="checkbox" id="service2" name="service" value="Digital Marketing">
+            <label for="service2">Digital Marketing</label><br>
+            <input type="checkbox" id="service3" name="service" value="SEO Optimization">
+            <label for="service3">SEO Optimization</label>
+        </div>
+
+        <!-- Long Answer -->
+        <label for="feedback">Please provide your feedback:</label>
+        <textarea id="feedback" name="feedback" rows="5" placeholder="Type your detailed feedback here..." required></textarea>
+
+        <!-- Rating Scale -->
+        <label>Rate your overall experience (1-5):</label>
+        <div class="rating">
+            <input type="radio" id="rating1" name="rating" value="1" required>
+            <label for="rating1">1</label>
+            <input type="radio" id="rating2" name="rating" value="2">
+            <label for="rating2">2</label>
+            <input type="radio" id="rating3" name="rating" value="3">
+            <label for="rating3">3</label>
+            <input type="radio" id="rating4" name="rating" value="4">
+            <label for="rating4">4</label>
+            <input type="radio" id="rating5" name="rating" value="5">
+            <label for="rating5">5</label>
+        </div>
+
+        <!-- Dropdown Menu -->
+        <label for="country">Select your country:</label>
+        <select id="country" name="country" required>
+            <option value="">--Select--</option>
+            <option value="India">India</option>
+            <option value="USA">USA</option>
+            <option value="UK">UK</option>
+            <option value="Australia">Australia</option>
+        </select>
+
+        <!-- Submit Button -->
+        <button type="submit" class="button">Submit</button>
+    </form>
+</body>
+</html>

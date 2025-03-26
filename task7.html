@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Table with Colspan and Rowspan</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid black;
+            text-align: center;
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+    <h1>HTML Table with Colspan and Rowspan</h1>
+
+    <table>
+        <tr>
+            <th>Product</th>
+            <th>Category</th>
+            <th colspan="2">Details</th>
+        </tr>
+        <tr>
+            <td rowspan="2">Laptop</td>
+            <td rowspan="2">Electronics</td>
+            <td>Price</td>
+            <td>₹60,000</td>
+        </tr>
+        <tr>
+            <td>Warranty</td>
+            <td>1 Year</td>
+        </tr>
+        <tr>
+            <td>Table</td>
+            <td>Furniture</td>
+            <td colspan="2">Wooden, ₹5,000</td>
+        </tr>
+    </table>
+
+</body>
+</html>
